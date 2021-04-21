@@ -87,6 +87,7 @@ namespace type_plants {
 	bool node::node_Output(ofstream& ofst) {
 		info->plants_Output(ofst);
 		info->Output(ofst);
+		ofst << "The number of consonants in the name: " << info->number_consonants() << "." << endl;
 		return true;
 	}
 
@@ -127,7 +128,7 @@ namespace type_plants {
 	}
 
 	void plants::plants_Output(ofstream& ofst) {
-		ofst << "Name: " << name << "," << endl;
+		ofst << "\nName: " << name << "," << endl;
 	}
 
 	void bash::Input(ifstream& ifst) {
@@ -142,4 +143,21 @@ namespace type_plants {
 
 	bash::~bash() {}
 
+	// Количество согласных букв в названии растения (целое число)
+	int plants::number_consonants()
+	{
+		string consonants = "BbCcDdFfGgHhJjKkLlMmNnPpQqRrSsTtVvWwXxYyZz";
+		int sum = 0;
+		for (unsigned i = 0; i < name.length(); i++)
+		{
+			for (unsigned j = 0; j < consonants.length(); j++)
+			{
+				if (name[i] == consonants[j])
+				{
+					sum++;
+				}
+			}
+		}
+		return sum;
+	}
 }

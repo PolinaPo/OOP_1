@@ -24,7 +24,9 @@ int main(int argc, char const *argv[])
     container c;
     c.container_Fill(ifst);
     cout << "Filled container" << endl;
-    c.container_Output(ofst);
+    //c.container_Output(ofst);
+    c.Output_only_tree(ofst);  
+    cout << "Output of trees only" << endl; 
     c.container_Clear();
     cout << "Empty container" << endl;
     c.container_Output(ofst);

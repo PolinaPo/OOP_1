@@ -15,6 +15,9 @@ namespace type_plants {
 		void plants_Output(ofstream& ofst);
 		virtual void Input(ifstream& ifst) = 0;
 		virtual void Output(ofstream& ofst) = 0;
+
+		// Вывод только деревьев
+		virtual void Output_only_tree(ofstream& ofst);
 	};
 
 	class tree : public plants {
@@ -22,6 +25,8 @@ namespace type_plants {
 		long age;
 		void Input(ifstream& ifst);
 		void Output(ofstream& ofst);
+		// Вывод только деревьев
+		void Output_only_tree(ofstream& ofst);
 		~tree();
 	};
 
@@ -32,6 +37,8 @@ namespace type_plants {
 		bool node_Add(ifstream& ifst);
 		bool node_Output(ofstream& ofst);
 		static node* node_Next(node* cur_node, node* value, int flag);
+		// Вывод только деревьев
+		bool Output_only_node_tree(ofstream& ofst);
 		~node();
 	};
 
@@ -43,6 +50,8 @@ namespace type_plants {
 		void container_Clear();
 		void container_Fill(ifstream& ifst);
 		void container_Output(ofstream& ofst);
+		// Вывод только деревьев
+		void Output_only_tree(ofstream& ofst);
 		container();
 		~container();
 	};

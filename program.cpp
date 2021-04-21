@@ -122,12 +122,15 @@ namespace type_plants {
 			return 0;
 		}
 		new_plants->Input(ifst);
+		int place_plant = 0;
+		ifst >> place_plant;
+		new_plants->place_growth = place(place_plant);
 		ifst >> new_plants -> name;
 		return new_plants;
 	}
 
 	void plants::plants_Output(ofstream& ofst) {
-		ofst << "Name: " << name << "," << endl;
+		ofst << "\nName: " << name << "," << "\n" << "Place of growth: " << place_growth + 1 << "," << endl;
 	}
 
 	void bash::Input(ifstream& ifst) {

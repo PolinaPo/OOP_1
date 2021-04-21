@@ -4,14 +4,6 @@ Name: topol,
 Tree age: 456.
 The number of consonants in the name: 3.
 
-Name: ryabina,
-Mounth: 5.
-The number of consonants in the name: 4.
-
-Name: cheremuha,
-Mounth: 7.
-The number of consonants in the name: 5.
-
 Name: bereza,
 Tree age: 3.
 The number of consonants in the name: 3.
@@ -19,3 +11,11 @@ The number of consonants in the name: 3.
 Name: klen,
 Tree age: 33.
 The number of consonants in the name: 3.
+
+Name: ryabina,
+Mounth: 5.
+The number of consonants in the name: 4.
+
+Name: cheremuha,
+Mounth: 7.
+The number of consonants in the name: 5.

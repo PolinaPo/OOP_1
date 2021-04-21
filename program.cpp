@@ -160,4 +160,34 @@ namespace type_plants {
 		}
 		return sum;
 	}
+
+	// Cравнение ключей двух программных объектов	
+	bool plants::compare(plants* other)
+	{
+		return number_consonants() > other->number_consonants(); // в порядке неубывания 
+	}
+
+	// Сортировка содержимого контейнера	
+	void container::sort()
+	{
+		node* left = head;
+		node* right = head->next;
+
+		node* temp = new node;
+		for (int i = 0; i < size - 1; i++)
+		{
+			for (int j = i + 1; j < size; j++)
+			{
+				if (left->info->compare(right->info))
+				{
+					temp->info = left->info;
+					left->info = right->info;
+					right->info = temp->info;
+				}
+				right = right->next;
+			}
+			left = left->next;
+			right = left->next;
+		}
+	}
 }

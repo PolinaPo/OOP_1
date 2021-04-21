@@ -1,4 +1,6 @@
-Container contains 5 element
+Container contains 6 element
+Name: Rosa,
+View: 2.
 Name: topol,
 Tree age: 456.
 Name: ryabina,

@@ -118,6 +118,9 @@ namespace type_plants {
 		case 2:
 			new_plants = new bash;
 			break;
+		case 3:				
+			new_plants = new flower;
+			break;
 		default:
 			return 0;
 		}
@@ -142,4 +145,18 @@ namespace type_plants {
 
 	bash::~bash() {}
 
+	// ÷веты 
+	void flower::Input(ifstream& ifst)
+	{
+		int f_view = 0;
+		ifst >> f_view;
+		flower_view = view(f_view);
+	}
+	
+	void flower::Output(ofstream& ofst)
+	{
+		ofst << "View: " << flower_view << "." << endl;
+	}
+	
+	flower::~flower() {}
 }

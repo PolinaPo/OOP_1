@@ -56,6 +56,17 @@ namespace type_plants {
 		void Output(ofstream& ofst);
 		~bash();
 	};
+
+	// Цветы 
+	class flower : public plants {
+	public:
+		// Значения видов цветов
+		enum view { DOMESTIC, GARDEN, WILD };
+		view flower_view;
+		void Input(ifstream& ifst);
+		void Output(ofstream& ofst);
+		~flower();
+	};
 } // end type_plants namespace
 
 #endif // !PROGRAM_H

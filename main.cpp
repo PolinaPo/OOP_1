@@ -7,7 +7,8 @@ using namespace type_plants;
 
 int main(int argc, char const *argv[])
 {
-    if (argc != 3) {
+    if (argc != 3) 
+    {
         cout << "Incorrect command line!\n" 
             << "Waited: command infile outfile" << endl;
         exit(1);
@@ -15,7 +16,8 @@ int main(int argc, char const *argv[])
     cout << argv[1] << endl;
     cout << argv[2] << endl;
     ifstream ifst(argv[1]);
-    if (!ifst.is_open()) {
+    if (!ifst.is_open()) 
+    {
         cout << "File is not open!" << endl;
         exit(1);
     }

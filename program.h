@@ -15,6 +15,8 @@ namespace type_plants {
 		void plants_Output(ofstream& ofst);
 		virtual void Input(ifstream& ifst) = 0;
 		virtual void Output(ofstream& ofst) = 0;
+		// Количество согласных букв в названии растения (целое число)
+		int number_consonants();
 	};
 
 	class tree : public plants {

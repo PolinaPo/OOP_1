@@ -6,7 +6,7 @@ using namespace std;
 
 namespace type_plants {
 
-	// общий класс фраз
+	// общий класс растений
 	class plants {
 	public:
 		string name;

@@ -4,78 +4,121 @@
 #include <string>
 using namespace std;
 
-namespace type_plants {
+namespace type_plants
+{
 
-	// общий класс фраз
-	class plants {
+	// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	class plants
+	{
 	public:
-		// Значения мест произрастания растений
-		enum place { TUNDRA, DESERT, STEPPE, TAIGA, MIXED_FOREST, MOUNTAINS };
-		place place_growth; //место произрастания	
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		enum place
+		{
+			TUNDRA,
+			DESERT,
+			STEPPE,
+			TAIGA,
+			MIXED_FOREST,
+			MOUNTAINS
+		};
+		place place_growth; //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 		string name;
-		virtual ~plants() {};
-		static plants* plants_Input(ifstream& ifst);
-		void plants_Output(ofstream& ofst);
-		virtual void Input(ifstream& ifst) = 0;
-		virtual void Output(ofstream& ofst) = 0;
-		// Количество согласных букв в названии растения (целое число)
+		virtual ~plants(){};
+		static plants *plants_Input(ifstream &ifst);
+		void plants_Output(ofstream &ofst);
+		virtual void Input(ifstream &ifst) = 0;
+		virtual void Output(ofstream &ofst) = 0;
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ)
 		int number_consonants();
-		// Cравнение ключей двух программных объектов
-		bool compare(struct plants* other);
+		// CпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		bool compare(struct plants *other);
+
+		// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		virtual void Output_only_tree(ofstream &ofst);
 	};
 
-	class tree : public plants {
+	class tree : public plants
+	{
 	public:
 		long age;
-		void Input(ifstream& ifst);
-		void Output(ofstream& ofst);
+		void Input(ifstream &ifst);
+		void Output(ofstream &ofst);
+		// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		void Output_only_tree(ofstream &ofst);
 		~tree();
 	};
 
-	class node {
+	class node
+	{
 	public:
-		plants* info;
-		node* next;
-		bool node_Add(ifstream& ifst);
-		bool node_Output(ofstream& ofst);
-		static node* node_Next(node* cur_node, node* value, int flag);
+		plants *info;
+		node *next;
+		bool node_Add(ifstream &ifst);
+		bool node_Output(ofstream &ofst);
+		static node *node_Next(node *cur_node, node *value, int flag);
+		// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		bool Output_only_node_tree(ofstream &ofst);
 		~node();
 	};
 
-	class container {
+	class container
+	{
 	public:
 		int size;
-		node* head;
-		node* tmp_node = new node;
+		node *head;
+		node *tmp_node = new node;
 		void container_Clear();
-		void container_Fill(ifstream& ifst);
-		void container_Output(ofstream& ofst);
-		// Сортировка содержимого контейнера
+		void container_Fill(ifstream &ifst);
+		void container_Output(ofstream &ofst);
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		void sort();
 
+		// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		void Output_only_tree(ofstream &ofst);
 		container();
 		~container();
 	};
 
-	class bash : public plants {
+	class bash : public plants
+	{
 	public:
-		// Значение месяца цветения кустарников
-		enum month { JAN, FEB, MAR, APR, MAY, JUNE, JULY, AUG, SEPT, OCT, NOV, DEC };
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+		enum month
+		{
+			JAN,
+			FEB,
+			MAR,
+			APR,
+			MAY,
+			JUNE,
+			JULY,
+			AUG,
+			SEPT,
+			OCT,
+			NOV,
+			DEC
+		};
 		month m;
-		void Input(ifstream& ifst);
-		void Output(ofstream& ofst);
+		void Input(ifstream &ifst);
+		void Output(ofstream &ofst);
 		~bash();
 	};
 
-	// Цветы 
-	class flower : public plants {
+	// пїЅпїЅпїЅпїЅпїЅ
+	class flower : public plants
+	{
 	public:
-		// Значения видов цветов
-		enum view { DOMESTIC, GARDEN, WILD };
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+		enum view
+		{
+			DOMESTIC,
+			GARDEN,
+			WILD
+		};
 		view flower_view;
-		void Input(ifstream& ifst);
-		void Output(ofstream& ofst);
+		void Input(ifstream &ifst);
+		void Output(ofstream &ofst);
 		~flower();
 	};
 } // end type_plants namespace

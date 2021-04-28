@@ -14,7 +14,7 @@ namespace type_plants
 
 	void tree::Output(ofstream &ofst)
 	{
-		ofst << "Tree age: " << age << "." << endl;
+		ofst << "Tree age: " << age << "," << endl;
 	}
 
 	tree::~tree() {}
@@ -92,9 +92,13 @@ namespace type_plants
 	{
 		info = plants::plants_Input(ifst);
 		if (info == NULL)
+		{
 			return false;
+		}	
 		else
+		{
 			return true;
+		}
 	}
 
 	bool node::node_Output(ofstream &ofst)
@@ -109,10 +113,10 @@ namespace type_plants
 	{
 		switch (flag)
 		{
-		case 1: // �������� ������ �� ��������� �������
+		case 1: // добавить ссылку на следующий элемент
 			cur_node->next = value;
 			return cur_node;
-		case 2: // �������� ��������� �������
+		case 2: // получить следующий элемент
 			cur_node = cur_node->next;
 			return cur_node;
 		default:
@@ -151,9 +155,8 @@ namespace type_plants
 
 	void plants::plants_Output(ofstream &ofst)
 	{
-		ofst << "\nName: " << name << ","
-				 << "\n"
-				 << "Place of growth: " << place_growth + 1 << "," << endl;
+		ofst << "\nName: " << name << "," << "\n"
+			 << "Place of growth: " << place_growth + 1 << "," << endl;
 	}
 
 	void bash::Input(ifstream &ifst)
@@ -165,12 +168,11 @@ namespace type_plants
 
 	void bash::Output(ofstream &ofst)
 	{
-		ofst << "Mounth: " << m << "." << endl;
+		ofst << "Mounth: " << m << "," << endl;
 	}
 
 	bash::~bash() {}
 
-	// �����
 	void flower::Input(ifstream &ifst)
 	{
 		int f_view = 0;
@@ -180,11 +182,12 @@ namespace type_plants
 
 	void flower::Output(ofstream &ofst)
 	{
-		ofst << "View: " << flower_view << "." << endl;
+		ofst << "View: " << flower_view << "," << endl;
 	}
 
 	flower::~flower() {}
-	// ���������� ��������� ���� � �������� �������� (����� �����)
+
+	// Количество согласных букв в названии растения (целое число)
 	int plants::number_consonants()
 	{
 		string consonants = "BbCcDdFfGgHhJjKkLlMmNnPpQqRrSsTtVvWwXxYyZz";
@@ -202,19 +205,19 @@ namespace type_plants
 		return sum;
 	}
 
-	// C�������� ������ ���� ����������� ��������
+	// Cравнение ключей двух программных объектов
 	bool plants::compare(plants *other)
 	{
-		return number_consonants() > other->number_consonants(); // � ������� ����������
+		return number_consonants() > other->number_consonants();
 	}
 
-	// ���������� ����������� ����������
+	// Сортировка содержимого контейнера
 	void container::sort()
 	{
-		node *left = head;
-		node *right = head->next;
+		node* left = head;
+		node* right = head->next;
 
-		node *temp = new node;
+		node* temp = new node;
 		for (int i = 0; i < size - 1; i++)
 		{
 			for (int j = i + 1; j < size; j++)
@@ -230,42 +233,45 @@ namespace type_plants
 			left = left->next;
 			right = left->next;
 		}
-		// ����� ������ ��������
-		void container::Output_only_tree(ofstream & ofst)
+	}
+
+	// Вывод только деревьев
+	void container::Output_only_tree(ofstream & ofst)
+	{
+		node *currentNode;
+		if (size == 0)
 		{
-			node *currentNode;
-			if (size == 0)
+			cout << "LIST IS EMPTY!" << endl;
+			return;
+		}
+
+		ofst << "\nOnly trees." << endl;
+		for (int i = 0; i < size; i++)
+		{
+			currentNode = head;
+			for (int j = 0; j < i; j++)
 			{
-				cout << "LIST IS EMPTY!" << endl;
-				return;
+				currentNode = currentNode->next;
 			}
-
-			ofst << "\nOnly trees." << endl;
-			for (int i = 0; i < size; i++)
-			{
-				currentNode = head;
-				for (int j = 0; j < i; j++)
-				{
-					currentNode = currentNode->next;
-				}
-				currentNode->Output_only_node_tree(ofst);
-			}
-		}
-
-		void tree::Output_only_tree(ofstream & ofst)
-		{
-			plants_Output(ofst);
-			Output(ofst);
-		}
-
-		void plants::Output_only_tree(ofstream & ofst)
-		{
-			ofst << endl;
-		}
-
-		bool node::Output_only_node_tree(ofstream & ofst)
-		{
-			info->Output_only_tree(ofst);
-			return true;
+			currentNode->Output_only_node_tree(ofst);
 		}
 	}
+
+	void tree::Output_only_tree(ofstream & ofst)
+	{
+		plants_Output(ofst);
+		Output(ofst);
+		ofst << "The number of consonants in the name: " << number_consonants() << "." << endl;
+	}
+
+	void plants::Output_only_tree(ofstream & ofst)
+	{
+		ofst << endl;
+	}
+
+	bool node::Output_only_node_tree(ofstream & ofst)
+	{
+		info->Output_only_tree(ofst);
+		return true;
+	}
+}

@@ -1,13 +1,51 @@
 Container contains 6 element
+
 Name: Rosa,
-View: 2.
-Name: topol,
-Tree age: 456.
-Name: ryabina,
-Mounth: 5.
-Name: cheremuha,
-Mounth: 7.
+Place of growth: 1,
+View: 2,
+The number of consonants in the name: 2.
+
 Name: bereza,
-Tree age: 3.
+Place of growth: 4,
+Tree age: 3,
+The number of consonants in the name: 3.
+
 Name: klen,
-Tree age: 33.
+Place of growth: 3,
+Tree age: 33,
+The number of consonants in the name: 3.
+
+Name: topoll,
+Place of growth: 1,
+Tree age: 456,
+The number of consonants in the name: 4.
+
+Name: ryabina,
+Place of growth: 2,
+Mounth: 5,
+The number of consonants in the name: 4.
+
+Name: cheremuha,
+Place of growth: 2,
+Mounth: 7,
+The number of consonants in the name: 5.
+
+Only trees.
+
+
+Name: bereza,
+Place of growth: 4,
+Tree age: 3,
+The number of consonants in the name: 3.
+
+Name: klen,
+Place of growth: 3,
+Tree age: 33,
+The number of consonants in the name: 3.
+
+Name: topoll,
+Place of growth: 1,
+Tree age: 456,
+The number of consonants in the name: 4.
+
+

@@ -29,7 +29,6 @@ int main(int argc, char const *argv[])
     c.sort();
     cout << "Sorted container" << endl;
     c.container_Output(ofst);
-    //c.container_Output(ofst);
     c.Output_only_tree(ofst);
     cout << "Output of trees only" << endl;
     c.container_Clear();

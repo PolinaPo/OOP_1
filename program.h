@@ -21,6 +21,8 @@ namespace type_plants {
 		virtual void Output(ofstream& ofst) = 0;
 		// Количество согласных букв в названии растения (целое число)
 		int number_consonants();
+		// Cравнение ключей двух программных объектов
+		bool compare(struct plants* other);
 	};
 
 	class tree : public plants {
@@ -49,6 +51,9 @@ namespace type_plants {
 		void container_Clear();
 		void container_Fill(ifstream& ifst);
 		void container_Output(ofstream& ofst);
+		// Сортировка содержимого контейнера
+		void sort();
+
 		container();
 		~container();
 	};

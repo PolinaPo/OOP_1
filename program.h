@@ -9,6 +9,10 @@ namespace type_plants {
 	// общий класс фраз
 	class plants {
 	public:
+		// Значения мест произрастания растений
+		enum place { TUNDRA, DESERT, STEPPE, TAIGA, MIXED_FOREST, MOUNTAINS };
+		place place_growth; //место произрастания	
+
 		string name;
 		virtual ~plants() {};
 		static plants* plants_Input(ifstream& ifst);

@@ -32,7 +32,6 @@ The number of consonants in the name: 5.
 
 Only trees.
 
-
 Name: bereza,
 Place of growth: 4,
 Tree age: 3,
@@ -47,5 +46,3 @@ Name: topoll,
 Place of growth: 1,
 Tree age: 456,
 The number of consonants in the name: 4.
-
-

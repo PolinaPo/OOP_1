@@ -9,7 +9,15 @@ namespace type_plants
 
 	void tree::Input(ifstream &ifst)
 	{
-		ifst >> age;
+		long tmp_age = 0;
+		ifst >> tmp_age;
+		// Проверка на то, что возраст - число больше нуля
+		if (tmp_age < 0)
+		{
+			cout << "Error, Age cannot be negative!" << endl;
+			exit(1);
+		}
+		age = tmp_age;
 	}
 
 	void tree::Output(ofstream &ofst)
@@ -21,6 +29,14 @@ namespace type_plants
 
 	void container::container_Fill(ifstream &ifst)
 	{
+		
+		// Проверка файла на пустоту
+		if (ifst.peek() == EOF) 
+		{
+			cout << "Error, Fail empty!" << endl;
+			exit(1);
+		}
+		
 		while (!ifst.eof())
 		{
 			node *tmpNode = new node;
@@ -131,6 +147,16 @@ namespace type_plants
 		plants *new_plants;
 		int k;
 		ifst >> k;
+		if (ifst.eof())
+		{
+			return 0;
+		}
+		// Проверка на то, что ключ - число от 1 до 3
+		if (k < 1 || k > 3)
+		{
+			cout << "Error, the key must be a value between 1 and 3!" << endl;
+			exit(1);
+		}
 		switch (k)
 		{
 		case 1:
@@ -148,6 +174,12 @@ namespace type_plants
 		new_plants->Input(ifst);
 		int place_plant = 0;
 		ifst >> place_plant;
+		// Проверка на то, что место произрастания - число от 0 до 5
+		if (place_plant < 0 || place_plant > 5)
+		{
+			cout << "Error, The place of growth should take a value from 0 to 5!" << endl;
+			exit(1);
+		}
 		new_plants->place_growth = place(place_plant);
 		ifst >> new_plants->name;
 		return new_plants;
@@ -163,6 +195,12 @@ namespace type_plants
 	{
 		int mnth = 0;
 		ifst >> mnth;
+		// Проверка на то, что месяц - число от 0 до 11
+		if (mnth < 0 || mnth > 11)
+		{
+			cout << "Error, month must be between 0 and 11!" << endl;
+			exit(1);
+		}
 		m = month(mnth);
 	}
 
@@ -177,6 +215,12 @@ namespace type_plants
 	{
 		int f_view = 0;
 		ifst >> f_view;
+		// Проверка на то, что вид - число от 0 до 2
+		if (f_view < 0 || f_view > 2)
+		{
+			cout << "Error, view must be between 0 and 2!" << endl;
+			exit(1);
+		}
 		flower_view = view(f_view);
 	}
 
@@ -266,7 +310,7 @@ namespace type_plants
 
 	void plants::Output_only_tree(ofstream & ofst)
 	{
-		ofst << endl;
+		ofst << "";
 	}
 
 	bool node::Output_only_node_tree(ofstream & ofst)

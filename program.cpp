@@ -245,7 +245,7 @@ namespace type_plants
 			return;
 		}
 
-		ofst << "\nOnly trees." << endl;
+		ofst << "Only trees." << endl;
 		for (int i = 0; i < size; i++)
 		{
 			currentNode = head;
@@ -266,7 +266,7 @@ namespace type_plants
 
 	void plants::Output_only_tree(ofstream & ofst)
 	{
-		ofst << endl;
+		ofst << "";
 	}
 
 	bool node::Output_only_node_tree(ofstream & ofst)

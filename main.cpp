@@ -28,8 +28,10 @@ int main(int argc, char const *argv[])
     cout << "Filled container" << endl;
     c.container_Output(ofst);
     c.sort();
+    ofst << "\nSorted" << endl;
     cout << "Sorted container" << endl;
     c.container_Output(ofst);
+    ofst << "\nFiltered" << endl;
     c.Output_only_tree(ofst);
     cout << "Output of trees only" << endl;
     c.container_Clear();

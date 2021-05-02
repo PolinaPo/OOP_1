@@ -6,7 +6,6 @@ using namespace std;
 
 namespace type_plants
 {
-
 	void tree::Input(ifstream &ifst)
 	{
 		long tmp_age = 0;
@@ -29,7 +28,6 @@ namespace type_plants
 
 	void container::container_Fill(ifstream &ifst)
 	{
-		
 		// Проверка файла на пустоту
 		if (ifst.peek() == EOF) 
 		{
@@ -121,7 +119,7 @@ namespace type_plants
 	{
 		info->plants_Output(ofst);
 		info->Output(ofst);
-		ofst << "The number of consonants in the name: " << info->number_consonants() << "." << endl;
+		ofst << "The number of consonants in the name: " << info->number_Consonants() << "." << endl;
 		return true;
 	}
 
@@ -232,7 +230,7 @@ namespace type_plants
 	flower::~flower() {}
 
 	// Количество согласных букв в названии растения (целое число)
-	int plants::number_consonants()
+	int plants::number_Consonants()
 	{
 		string consonants = "BbCcDdFfGgHhJjKkLlMmNnPpQqRrSsTtVvWwXxYyZz";
 		int sum = 0;
@@ -250,13 +248,13 @@ namespace type_plants
 	}
 
 	// Cравнение ключей двух программных объектов
-	bool plants::compare(plants *other)
+	bool plants::Compare(plants *other)
 	{
-		return number_consonants() > other->number_consonants();
+		return number_Consonants() > other->number_Consonants();
 	}
 
 	// Сортировка содержимого контейнера
-	void container::sort()
+	void container::Sort()
 	{
 		node* left = head;
 		node* right = head->next;
@@ -266,7 +264,7 @@ namespace type_plants
 		{
 			for (int j = i + 1; j < size; j++)
 			{
-				if (left->info->compare(right->info))
+				if (left->info->Compare(right->info))
 				{
 					temp->info = left->info;
 					left->info = right->info;
@@ -305,7 +303,7 @@ namespace type_plants
 	{
 		plants_Output(ofst);
 		Output(ofst);
-		ofst << "The number of consonants in the name: " << number_consonants() << "." << endl;
+		ofst << "The number of consonants in the name: " << number_Consonants() << "." << endl;
 	}
 
 	void plants::Output_only_tree(ofstream & ofst)

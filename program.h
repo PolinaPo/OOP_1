@@ -21,9 +21,9 @@ namespace type_plants
 		virtual void Input(ifstream &ifst) = 0;
 		virtual void Output(ofstream &ofst) = 0;
 		// Количество согласных букв в названии растения (целое число)
-		int number_consonants();
+		int number_Consonants();
 		// Cравнение ключей двух программных объектов
-		bool compare(struct plants *other);
+		bool Compare(struct plants *other);
 		// Вывод только деревьев
 		virtual void Output_only_tree(ofstream &ofst);
 	};
@@ -62,7 +62,7 @@ namespace type_plants
 		void container_Fill(ifstream &ifst);
 		void container_Output(ofstream &ofst);
 		// Сортировка содержимого контейнера
-		void sort();
+		void Sort();
 
 		// Вывод только деревьев
 		void Output_only_tree(ofstream &ofst);

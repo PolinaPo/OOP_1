@@ -2,7 +2,7 @@ Container contains 6 element
 
 Name: Rosa,
 Place of growth: 1,
-View: 2,
+View: 3,
 The number of consonants in the name: 2.
 
 Name: topoll,
@@ -12,12 +12,12 @@ The number of consonants in the name: 4.
 
 Name: ryabina,
 Place of growth: 2,
-Mounth: 5,
+Mounth: 6,
 The number of consonants in the name: 4.
 
 Name: cheremuha,
 Place of growth: 2,
-Mounth: 7,
+Mounth: 8,
 The number of consonants in the name: 5.
 
 Name: bereza,
@@ -35,7 +35,7 @@ Container contains 6 element
 
 Name: Rosa,
 Place of growth: 1,
-View: 2,
+View: 3,
 The number of consonants in the name: 2.
 
 Name: bereza,
@@ -55,12 +55,12 @@ The number of consonants in the name: 4.
 
 Name: ryabina,
 Place of growth: 2,
-Mounth: 5,
+Mounth: 6,
 The number of consonants in the name: 4.
 
 Name: cheremuha,
 Place of growth: 2,
-Mounth: 7,
+Mounth: 8,
 The number of consonants in the name: 5.
 
 Filtered

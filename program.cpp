@@ -168,7 +168,7 @@ namespace type_plants
 
 	void bash::Output(ofstream &ofst)
 	{
-		ofst << "Mounth: " << m << "," << endl;
+		ofst << "Mounth: " << m + 1 << "," << endl;
 	}
 
 	bash::~bash() {}
@@ -182,7 +182,7 @@ namespace type_plants
 
 	void flower::Output(ofstream &ofst)
 	{
-		ofst << "View: " << flower_view << "," << endl;
+		ofst << "View: " << flower_view + 1 << "," << endl;
 	}
 
 	flower::~flower() {}

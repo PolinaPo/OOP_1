@@ -1,4 +1,19 @@
-Container contains 6 element
+Container contains 9 element
+
+Name: Flover,
+Place of growth: 1,
+View: 3,
+The number of consonants in the name: 4.
+
+Name: Bush,
+Place of growth: 1,
+Mounth: 5,
+The number of consonants in the name: 3.
+
+Name: Derevo,
+Place of growth: 1,
+Tree age: 222,
+The number of consonants in the name: 3.
 
 Name: Rosa,
 Place of growth: 1,
@@ -31,12 +46,22 @@ Tree age: 33,
 The number of consonants in the name: 3.
 
 Sorted
-Container contains 6 element
+Container contains 9 element
 
 Name: Rosa,
 Place of growth: 1,
 View: 3,
 The number of consonants in the name: 2.
+
+Name: Derevo,
+Place of growth: 1,
+Tree age: 222,
+The number of consonants in the name: 3.
+
+Name: Bush,
+Place of growth: 1,
+Mounth: 5,
+The number of consonants in the name: 3.
 
 Name: bereza,
 Place of growth: 4,
@@ -48,14 +73,19 @@ Place of growth: 3,
 Tree age: 33,
 The number of consonants in the name: 3.
 
-Name: topoll,
-Place of growth: 1,
-Tree age: 456,
-The number of consonants in the name: 4.
-
 Name: ryabina,
 Place of growth: 2,
 Mounth: 6,
+The number of consonants in the name: 4.
+
+Name: Flover,
+Place of growth: 1,
+View: 3,
+The number of consonants in the name: 4.
+
+Name: topoll,
+Place of growth: 1,
+Tree age: 456,
 The number of consonants in the name: 4.
 
 Name: cheremuha,
@@ -65,6 +95,11 @@ The number of consonants in the name: 5.
 
 Filtered
 Only trees.
+
+Name: Derevo,
+Place of growth: 1,
+Tree age: 222,
+The number of consonants in the name: 3.
 
 Name: bereza,
 Place of growth: 4,

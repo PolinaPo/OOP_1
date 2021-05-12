@@ -116,7 +116,7 @@ namespace type_plants {
 			new_plants = new tree;
 			break;
 		case 2:
-			new_plants = new bash;
+			new_plants = new bush;
 			break;
 		default:
 			return 0;
@@ -127,19 +127,72 @@ namespace type_plants {
 	}
 
 	void plants::plants_Output(ofstream& ofst) {
-		ofst << "Name: " << name << "," << endl;
+		ofst << "\nName: " << name << "," << endl;
 	}
 
-	void bash::Input(ifstream& ifst) {
+	void bush::Input(ifstream& ifst) {
 		int mnth = 0;
 		ifst >> mnth;
 		m = month(mnth);
 	}
 
-	void bash::Output(ofstream& ofst) {
-		ofst << "Mounth: " << m << "." << endl;
+	void bush::Output(ofstream& ofst) {
+		ofst << "Month: " << m << "." << endl;
 	}
 
-	bash::~bash() {}
+	bush::~bush() {}
 
+
+	void tree::MultiMethod(plants* other, ofstream& ofst) {
+		other->MM_Tree(ofst);
+	}
+
+	void tree::MM_Tree(ofstream& ofst) {
+		ofst << "-------------" << endl;
+		ofst << "Tree and Tree" << endl;
+	}
+
+	void tree::MM_Bush(ofstream& ofst) {
+		ofst << "-------------" << endl;
+		ofst << "Bush and Tree" << endl;
+	}
+
+	void bush::MultiMethod(plants* other, ofstream& ofst) {
+		other->MM_Bush(ofst);
+	}
+
+	void bush::MM_Tree(ofstream& ofst) {
+		ofst << "-------------" << endl;
+		ofst << "Tree and Bush" << endl;
+	}
+
+	void bush::MM_Bush(ofstream& ofst) {
+		ofst << "-------------" << endl;
+		ofst << "Bush and Bush" << endl;
+	}
+
+	node* container::get_node(int index)
+	{
+		node* retNode = head;
+
+		for (int i = 0; i < index; i++)
+		{
+			retNode = retNode->next;
+		}
+
+		return retNode;
+	}
+
+	void container::MultiMethod(ofstream& ofst) {
+		ofst << "Multimethod." << endl;
+		for (int i = 0; i < size - 1; i++)
+		{
+			for (int j = i + 1; j < size; j++)
+			{
+				get_node(i)->info->MultiMethod(get_node(j)->info, ofst);
+				get_node(i)->node_Output(ofst);
+				get_node(j)->node_Output(ofst);
+			}
+		}
+	}
 }

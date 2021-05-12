@@ -15,6 +15,10 @@ namespace type_plants {
 		void plants_Output(ofstream& ofst);
 		virtual void Input(ifstream& ifst) = 0;
 		virtual void Output(ofstream& ofst) = 0;
+		// Мультиметод
+		virtual void MultiMethod(plants* other, ofstream& ofst) = 0;
+		virtual void MM_Tree(ofstream& ofst) = 0;
+		virtual void MM_Bush(ofstream& ofst) = 0;
 	};
 
 	class tree : public plants {
@@ -22,6 +26,10 @@ namespace type_plants {
 		long age;
 		void Input(ifstream& ifst);
 		void Output(ofstream& ofst);
+		// Мультиметод
+		void MultiMethod(plants* other, ofstream& ofst);
+		void MM_Tree(ofstream& ofst);
+		void MM_Bush(ofstream& ofst);
 		~tree();
 	};
 
@@ -43,18 +51,25 @@ namespace type_plants {
 		void container_Clear();
 		void container_Fill(ifstream& ifst);
 		void container_Output(ofstream& ofst);
+		node* get_node(int index);
+		// Мультиметод
+		void MultiMethod(ofstream& ofst);
 		container();
 		~container();
 	};
 
-	class bash : public plants {
+	class bush : public plants {
 	public:
 		// Значение месяца цветения кустарников
 		enum month { JAN, FEB, MAR, APR, MAY, JUNE, JULY, AUG, SEPT, OCT, NOV, DEC };
 		month m;
 		void Input(ifstream& ifst);
 		void Output(ofstream& ofst);
-		~bash();
+		// Мультиметод
+		void MultiMethod(plants* other, ofstream& ofst);
+		void MM_Tree(ofstream& ofst);
+		void MM_Bush(ofstream& ofst);
+		~bush();
 	};
 } // end type_plants namespace
 

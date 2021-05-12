@@ -1,15 +1,192 @@
 Container contains 7 element
+
 Name: malina,
-Mounth: 4.
+Month: 4.
+
 Name: sekvoya,
 Tree age: 2000.
+
 Name: topol,
 Tree age: 456.
+
 Name: ryabina,
-Mounth: 5.
+Month: 5.
+
 Name: cheremuha,
-Mounth: 7.
+Month: 7.
+
 Name: bereza,
 Tree age: 3.
+
+Name: klen,
+Tree age: 33.
+
+Multimethod.
+-------------
+Bush and Tree
+
+Name: malina,
+Month: 4.
+
+Name: sekvoya,
+Tree age: 2000.
+-------------
+Bush and Tree
+
+Name: malina,
+Month: 4.
+
+Name: topol,
+Tree age: 456.
+-------------
+Bush and Bush
+
+Name: malina,
+Month: 4.
+
+Name: ryabina,
+Month: 5.
+-------------
+Bush and Bush
+
+Name: malina,
+Month: 4.
+
+Name: cheremuha,
+Month: 7.
+-------------
+Bush and Tree
+
+Name: malina,
+Month: 4.
+
+Name: bereza,
+Tree age: 3.
+-------------
+Bush and Tree
+
+Name: malina,
+Month: 4.
+
+Name: klen,
+Tree age: 33.
+-------------
+Tree and Tree
+
+Name: sekvoya,
+Tree age: 2000.
+
+Name: topol,
+Tree age: 456.
+-------------
+Tree and Bush
+
+Name: sekvoya,
+Tree age: 2000.
+
+Name: ryabina,
+Month: 5.
+-------------
+Tree and Bush
+
+Name: sekvoya,
+Tree age: 2000.
+
+Name: cheremuha,
+Month: 7.
+-------------
+Tree and Tree
+
+Name: sekvoya,
+Tree age: 2000.
+
+Name: bereza,
+Tree age: 3.
+-------------
+Tree and Tree
+
+Name: sekvoya,
+Tree age: 2000.
+
+Name: klen,
+Tree age: 33.
+-------------
+Tree and Bush
+
+Name: topol,
+Tree age: 456.
+
+Name: ryabina,
+Month: 5.
+-------------
+Tree and Bush
+
+Name: topol,
+Tree age: 456.
+
+Name: cheremuha,
+Month: 7.
+-------------
+Tree and Tree
+
+Name: topol,
+Tree age: 456.
+
+Name: bereza,
+Tree age: 3.
+-------------
+Tree and Tree
+
+Name: topol,
+Tree age: 456.
+
+Name: klen,
+Tree age: 33.
+-------------
+Bush and Bush
+
+Name: ryabina,
+Month: 5.
+
+Name: cheremuha,
+Month: 7.
+-------------
+Bush and Tree
+
+Name: ryabina,
+Month: 5.
+
+Name: bereza,
+Tree age: 3.
+-------------
+Bush and Tree
+
+Name: ryabina,
+Month: 5.
+
+Name: klen,
+Tree age: 33.
+-------------
+Bush and Tree
+
+Name: cheremuha,
+Month: 7.
+
+Name: bereza,
+Tree age: 3.
+-------------
+Bush and Tree
+
+Name: cheremuha,
+Month: 7.
+
+Name: klen,
+Tree age: 33.
+-------------
+Tree and Tree
+
+Name: bereza,
+Tree age: 3.
+
 Name: klen,
 Tree age: 33.

@@ -1,4 +1,8 @@
-Container contains 5 element
+Container contains 7 element
+Name: malina,
+Mounth: 4.
+Name: sekvoya,
+Tree age: 2000.
 Name: topol,
 Tree age: 456.
 Name: ryabina,

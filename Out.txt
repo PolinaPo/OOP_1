@@ -5,6 +5,221 @@ Place of growth: 1,
 View: 2,
 The number of consonants in the name: 2.
 
+Name: topoll,
+Place of growth: 1,
+Tree age: 456,
+The number of consonants in the name: 4.
+
+Name: ryabina,
+Place of growth: 2,
+Month: 5,
+The number of consonants in the name: 4.
+
+Name: cheremuha,
+Place of growth: 2,
+Month: 7,
+The number of consonants in the name: 5.
+
+Name: bereza,
+Place of growth: 4,
+Tree age: 3,
+The number of consonants in the name: 3.
+
+Name: klen,
+Place of growth: 3,
+Tree age: 33,
+The number of consonants in the name: 3.
+
+Multimethod.
+---------------
+Flower and Tree
+
+Name: Rosa,
+Place of growth: 1,
+View: 2,
+The number of consonants in the name: 2.
+
+Name: topoll,
+Place of growth: 1,
+Tree age: 456,
+The number of consonants in the name: 4.
+---------------
+Flower and Bush
+
+Name: Rosa,
+Place of growth: 1,
+View: 2,
+The number of consonants in the name: 2.
+
+Name: ryabina,
+Place of growth: 2,
+Month: 5,
+The number of consonants in the name: 4.
+---------------
+Flower and Bush
+
+Name: Rosa,
+Place of growth: 1,
+View: 2,
+The number of consonants in the name: 2.
+
+Name: cheremuha,
+Place of growth: 2,
+Month: 7,
+The number of consonants in the name: 5.
+---------------
+Flower and Tree
+
+Name: Rosa,
+Place of growth: 1,
+View: 2,
+The number of consonants in the name: 2.
+
+Name: bereza,
+Place of growth: 4,
+Tree age: 3,
+The number of consonants in the name: 3.
+---------------
+Flower and Tree
+
+Name: Rosa,
+Place of growth: 1,
+View: 2,
+The number of consonants in the name: 2.
+
+Name: klen,
+Place of growth: 3,
+Tree age: 33,
+The number of consonants in the name: 3.
+-------------
+Tree and Bush
+
+Name: topoll,
+Place of growth: 1,
+Tree age: 456,
+The number of consonants in the name: 4.
+
+Name: ryabina,
+Place of growth: 2,
+Month: 5,
+The number of consonants in the name: 4.
+-------------
+Tree and Bush
+
+Name: topoll,
+Place of growth: 1,
+Tree age: 456,
+The number of consonants in the name: 4.
+
+Name: cheremuha,
+Place of growth: 2,
+Month: 7,
+The number of consonants in the name: 5.
+-------------
+Tree and Tree
+
+Name: topoll,
+Place of growth: 1,
+Tree age: 456,
+The number of consonants in the name: 4.
+
+Name: bereza,
+Place of growth: 4,
+Tree age: 3,
+The number of consonants in the name: 3.
+-------------
+Tree and Tree
+
+Name: topoll,
+Place of growth: 1,
+Tree age: 456,
+The number of consonants in the name: 4.
+
+Name: klen,
+Place of growth: 3,
+Tree age: 33,
+The number of consonants in the name: 3.
+-------------
+Bush and Bush
+
+Name: ryabina,
+Place of growth: 2,
+Month: 5,
+The number of consonants in the name: 4.
+
+Name: cheremuha,
+Place of growth: 2,
+Month: 7,
+The number of consonants in the name: 5.
+-------------
+Bush and Tree
+
+Name: ryabina,
+Place of growth: 2,
+Month: 5,
+The number of consonants in the name: 4.
+
+Name: bereza,
+Place of growth: 4,
+Tree age: 3,
+The number of consonants in the name: 3.
+-------------
+Bush and Tree
+
+Name: ryabina,
+Place of growth: 2,
+Month: 5,
+The number of consonants in the name: 4.
+
+Name: klen,
+Place of growth: 3,
+Tree age: 33,
+The number of consonants in the name: 3.
+-------------
+Bush and Tree
+
+Name: cheremuha,
+Place of growth: 2,
+Month: 7,
+The number of consonants in the name: 5.
+
+Name: bereza,
+Place of growth: 4,
+Tree age: 3,
+The number of consonants in the name: 3.
+-------------
+Bush and Tree
+
+Name: cheremuha,
+Place of growth: 2,
+Month: 7,
+The number of consonants in the name: 5.
+
+Name: klen,
+Place of growth: 3,
+Tree age: 33,
+The number of consonants in the name: 3.
+-------------
+Tree and Tree
+
+Name: bereza,
+Place of growth: 4,
+Tree age: 3,
+The number of consonants in the name: 3.
+
+Name: klen,
+Place of growth: 3,
+Tree age: 33,
+The number of consonants in the name: 3.
+
+Sorted
+Container contains 6 element
+
+Name: Rosa,
+Place of growth: 1,
+View: 2,
+The number of consonants in the name: 2.
+
 Name: bereza,
 Place of growth: 4,
 Tree age: 3,
@@ -22,12 +237,12 @@ The number of consonants in the name: 4.
 
 Name: ryabina,
 Place of growth: 2,
-Mounth: 5,
+Month: 5,
 The number of consonants in the name: 4.
 
 Name: cheremuha,
 Place of growth: 2,
-Mounth: 7,
+Month: 7,
 The number of consonants in the name: 5.
 
 Only trees.

@@ -50,9 +50,20 @@ int main(int argc, char const *argv[])
     container c;
     c.container_Fill(ifst);
     cout << "Filled container" << endl;
-    c.Sort();
-    cout << "Sorted container" << endl;
+
     c.container_Output(ofst);
+    cout << "Output container" << endl;
+
+    c.MultiMethod(ofst);
+    cout << "Multimethod" << endl;
+
+    c.Sort();
+    ofst << "\nSorted" << endl;
+    cout << "Sorted container" << endl;
+
+    c.container_Output(ofst);
+    cout << "Output container" << endl;
+
     c.Output_only_tree(ofst);
     cout << "Output of trees only" << endl;
     c.container_Clear();

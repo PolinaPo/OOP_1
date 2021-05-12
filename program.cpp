@@ -161,7 +161,7 @@ namespace type_plants
 			new_plants = new tree;
 			break;
 		case 2:
-			new_plants = new bash;
+			new_plants = new bush;
 			break;
 		case 3:
 			new_plants = new flower;
@@ -189,7 +189,7 @@ namespace type_plants
 			 << "Place of growth: " << place_growth + 1 << "," << endl;
 	}
 
-	void bash::Input(ifstream &ifst)
+	void bush::Input(ifstream &ifst)
 	{
 		int mnth = 0;
 		ifst >> mnth;
@@ -202,12 +202,12 @@ namespace type_plants
 		m = month(mnth);
 	}
 
-	void bash::Output(ofstream &ofst)
+	void bush::Output(ofstream &ofst)
 	{
-		ofst << "Mounth: " << m << "," << endl;
+		ofst << "Month: " << m << "," << endl;
 	}
 
-	bash::~bash() {}
+	bush::~bush() {}
 
 	void flower::Input(ifstream &ifst)
 	{
@@ -315,5 +315,100 @@ namespace type_plants
 	{
 		info->Output_only_tree(ofst);
 		return true;
+	}
+
+	void tree::MultiMethod(plants* other, ofstream& ofst) 
+	{
+		other->MM_Tree(ofst);
+	}
+
+	void tree::MM_Tree(ofstream& ofst) 
+	{
+		ofst << "-------------" << endl;
+		ofst << "Tree and Tree" << endl;
+	}
+
+	void tree::MM_Bush(ofstream& ofst) 
+	{
+		ofst << "-------------" << endl;
+		ofst << "Bush and Tree" << endl;
+	}
+
+	void tree::MM_Flower(ofstream& ofst) 
+	{
+		ofst << "---------------" << endl;
+		ofst << "Flower and Tree" << endl;
+	}
+
+	void bush::MultiMethod(plants* other, ofstream& ofst) 
+	{
+		other->MM_Bush(ofst);
+	}
+
+	void bush::MM_Tree(ofstream& ofst) 
+	{
+		ofst << "-------------" << endl;
+		ofst << "Tree and Bush" << endl;
+	}
+
+	void bush::MM_Bush(ofstream& ofst) 
+	{
+		ofst << "-------------" << endl;
+		ofst << "Bush and Bush" << endl;
+	}
+
+	void bush::MM_Flower(ofstream& ofst) 
+	{
+		ofst << "---------------" << endl;
+		ofst << "Flower and Bush" << endl;
+	}
+
+	void flower::MultiMethod(plants* other, ofstream& ofst) 
+	{
+		other->MM_Flower(ofst);
+	}
+
+	void flower::MM_Tree(ofstream& ofst) 
+	{
+		ofst << "---------------" << endl;
+		ofst << "Tree and Flower" << endl;
+	}
+
+	void flower::MM_Bush(ofstream& ofst) 
+	{
+		ofst << "---------------" << endl;
+		ofst << "Bush and Flower" << endl;
+	}
+
+	void flower::MM_Flower(ofstream& ofst) 
+	{
+		ofst << "-----------------" << endl;
+		ofst << "Flower and Flower" << endl;
+	}
+
+	node* container::get_node(int index)
+	{
+		node* retNode = head;
+
+		for (int i = 0; i < index; i++)
+		{
+			retNode = retNode->next;
+		}
+
+		return retNode;
+	}
+
+	void container::MultiMethod(ofstream& ofst) 
+	{
+		ofst << "\nMultimethod." << endl;
+		for (int i = 0; i < size - 1; i++)
+		{
+			for (int j = i + 1; j < size; j++)
+			{
+				get_node(i)->info->MultiMethod(get_node(j)->info, ofst);
+				get_node(i)->node_Output(ofst);
+				get_node(j)->node_Output(ofst);
+			}
+		}
 	}
 }

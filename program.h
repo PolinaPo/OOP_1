@@ -26,6 +26,12 @@ namespace type_plants
 		bool Compare(struct plants *other);
 		// Вывод только деревьев
 		virtual void Output_only_tree(ofstream &ofst);
+
+		// Мультиметод
+		virtual void MultiMethod(plants* other, ofstream& ofst) = 0;
+		virtual void MM_Tree(ofstream& ofst) = 0;
+		virtual void MM_Bush(ofstream& ofst) = 0;
+		virtual void MM_Flower(ofstream& ofst) = 0;
 	};
 
 	class tree : public plants
@@ -34,6 +40,12 @@ namespace type_plants
 		long age;
 		void Input(ifstream &ifst);
 		void Output(ofstream &ofst);
+		// Мультиметод
+		void MultiMethod(plants* other, ofstream& ofst);
+		void MM_Tree(ofstream& ofst);
+		void MM_Bush(ofstream& ofst);
+		void MM_Flower(ofstream& ofst);
+
 		// Вывод только деревьев
 		void Output_only_tree(ofstream &ofst);
 		~tree();
@@ -61,6 +73,10 @@ namespace type_plants
 		void container_Clear();
 		void container_Fill(ifstream &ifst);
 		void container_Output(ofstream &ofst);
+		node* get_node(int index);
+
+		void MultiMethod(ofstream& ofst);
+
 		// Сортировка содержимого контейнера
 		void Sort();
 
@@ -70,7 +86,7 @@ namespace type_plants
 		~container();
 	};
 
-	class bash : public plants
+	class bush : public plants
 	{
 	public:
 		// Значение месяца цветения кустарников
@@ -78,7 +94,13 @@ namespace type_plants
 		month m;
 		void Input(ifstream &ifst);
 		void Output(ofstream &ofst);
-		~bash();
+		// Мультиметод
+		void MultiMethod(plants* other, ofstream& ofst);
+		void MM_Tree(ofstream& ofst);
+		void MM_Bush(ofstream& ofst);
+		void MM_Flower(ofstream& ofst);
+
+		~bush();
 	};
 
 	class flower : public plants
@@ -89,6 +111,12 @@ namespace type_plants
 		view flower_view;
 		void Input(ifstream &ifst);
 		void Output(ofstream &ofst);
+		// Мультиметод
+		void MultiMethod(plants* other, ofstream& ofst);
+		void MM_Tree(ofstream& ofst);
+		void MM_Bush(ofstream& ofst);
+		void MM_Flower(ofstream& ofst);
+
 		~flower();
 	};
 } // end type_plants namespace

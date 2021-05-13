@@ -202,7 +202,7 @@ namespace type_plants
 				}
 			}
 		}
-		return sum;
+		return sum*2;
 	}
 
 	// Cравнение ключей двух программных объектов
